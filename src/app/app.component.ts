@@ -55,13 +55,11 @@ export class AppComponent implements OnInit {
   }
 
   private loadModalPwa(): void {
-    if (this.platform.ANDROID) {
-      window.addEventListener('beforeinstallprompt', (event: any) => {
-        event.preventDefault();
-        this.modalPwaEvent = event;
-        this.modalPwaPlatform = 'ANDROID';
-      });
-    }
+    window.addEventListener('beforeinstallprompt', (event: any) => {
+      event.preventDefault();
+      this.modalPwaEvent = event;
+      this.modalPwaPlatform = 'ANDROID';
+    });
 
     if (this.platform.IOS && this.platform.SAFARI) {
       const isInStandaloneMode = ('standalone' in window.navigator) && ((<any>window.navigator)['standalone']);
