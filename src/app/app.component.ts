@@ -6,7 +6,7 @@ import { filter, map } from 'rxjs/operators';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
 
@@ -55,11 +55,13 @@ export class AppComponent implements OnInit {
   }
 
   private loadModalPwa(): void {
-    window.addEventListener('beforeinstallprompt', (event: any) => {
-      event.preventDefault();
-      this.modalPwaEvent = event;
-      this.modalPwaPlatform = 'ANDROID';
-    });
+    if (this.platform.ANDROID) {
+      window.addEventListener('beforeinstallprompt', (event: any) => {
+        event.preventDefault();
+        this.modalPwaEvent = event;
+        this.modalPwaPlatform = 'ANDROID';
+      });
+    }
 
     if (this.platform.IOS && this.platform.SAFARI) {
       const isInStandaloneMode = ('standalone' in window.navigator) && ((<any>window.navigator)['standalone']);
