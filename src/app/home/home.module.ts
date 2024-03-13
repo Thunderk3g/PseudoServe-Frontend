@@ -1,17 +1,16 @@
-// home.module.ts
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './home.component'; // make sure to import your HomeComponent
+import { HomeComponent } from './home.component'; // Ensure this path is correct
+import { HeaderModule } from '../common/header/header.module'; // Adjust path as necessary
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent // Correctly declare HomeComponent here
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
-  ]
+    HeaderModule // Correctly import HeaderModule here
+  ],
+  exports: [HomeComponent]
 })
 export class HomeModule { }

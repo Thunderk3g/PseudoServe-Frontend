@@ -1,4 +1,6 @@
-<div class="container-fluid py-3">
+<!-- <app-header></app-header> -->
+<div class="parent-container">
+  <div class="container-fluid py-3">
     <div class="row my-5">
       <div class="col text-end">
         Status:
@@ -14,7 +16,8 @@
   </div>
   <div class="glass-background">
     <p>Pseudo Serve is a powerful tool designed to streamline front-end development by allowing the creation of mock
-      backend APIs with dynamic responses. It provides an efficient way to simulate backend functionality for testing and
+      backend APIs with dynamic responses. It provides an efficient way to simulate backend functionality for testing
+      and
       development purposes, thus accelerating workflow and improving productivity.</p>
   </div>
   <div class="w-100 position-absolute top-0" *ngIf="modalVersion">
@@ -24,7 +27,7 @@
       A new version of this app is available. <a href="" (click)="updateVersion()">Update now</a>
     </div>
   </div>
-  
+
   <div class="w-100 position-absolute bottom-0" *ngIf="modalPwaPlatform === 'ANDROID' || modalPwaPlatform === 'IOS'">
     <div class="alert alert-secondary m-2">
       <button type="button" class="btn-close position-absolute top-0 end-0 m-1" aria-label="Close"
@@ -44,3 +47,4 @@
       </div>
     </div>
   </div>
+</div>

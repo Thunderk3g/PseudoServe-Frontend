@@ -6,6 +6,13 @@ body {
     background-color: #000;
 }
 
+.parent-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8.75rem;
+}
+
 .wrapper {
     perspective: 1000px;
     display: flex;
