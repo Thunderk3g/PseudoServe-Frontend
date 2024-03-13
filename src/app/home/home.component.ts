@@ -6,10 +6,9 @@ import { filter, map } from 'rxjs/operators';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
   isOnline: boolean;
   modalVersion: boolean;
   modalPwaEvent: any;
@@ -22,6 +21,7 @@ export class HomeComponent implements OnInit {
   }
 
   public ngOnInit(): void {
+    console.log("I am here");
     this.updateOnlineStatus();
 
     window.addEventListener('online', this.updateOnlineStatus.bind(this));
