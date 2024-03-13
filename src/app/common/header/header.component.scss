@@ -1,0 +1,141 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Sawarabi Mincho', sans-serif;
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #20202380;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.header-text {
+    color: white;
+    display: flex;
+    font-size: 1.5em;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    width: 4.5rem;
+}
+
+.user-profile {
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.header-first {
+    display: flex;
+}
+
+.up:hover,
+.up:focus {
+    box-shadow: inset 0 -3.25em 0 0 var(--hover);
+}
+
+.up {
+    --color: #ad16e4;
+    /* Reversed color */
+    --hover: #0993ea;
+}
+
+
+button:hover,
+button:focus {
+    border-color: var(--hover);
+    color: #fff;
+}
+
+button {
+    color: var(--color);
+    transition: 0.25s;
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+}
+
+.down {
+    --color: #0993ea;
+    /* Reversed color */
+    --hover: #ad16e4;
+    /* Reversed hover color */
+}
+
+.down:hover,
+.down:focus {
+    box-shadow: inset 0 3.25em 0 0 var(--hover);
+    color: #fff;
+}
+
+.hamburger {
+    display: none;
+    /* Hide by default */
+    color: white;
+    font-size: 2rem;
+    /* Adjust the size of hamburger icon */
+
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+        /* Show hamburger icon on small screens */
+    }
+
+    .nav.active {
+        display: flex;
+        /* Show nav when active */
+    }
+
+    .nav-link {
+        margin: 10px 0;
+        /* Adjust margin for vertical layout */
+    }
+
+    .header-text,
+    .user-profile {
+        display: none;
+        /* Optional: Hide text and profile on small screens for more space */
+    }
+}
+
+.nav-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

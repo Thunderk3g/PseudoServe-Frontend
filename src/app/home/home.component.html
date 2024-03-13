@@ -1,24 +1,87 @@
-<!-- <app-header></app-header> -->
+<app-header></app-header>
 <div class="parent-container">
-  <div class="container-fluid py-3">
-    <div class="row my-5">
-      <div class="col text-end">
-        Status:
-      </div>
-      <div class="col">
-        <span class="badge bg-success" *ngIf="isOnline">Online</span>
-        <span class="badge bg-danger" *ngIf="!isOnline">Offline</span>
+  <div class="main-content-head">
+    <div class="container-fluid py-3">
+      <div class="row my-5">
+        <div class="col text-end status">
+          Status:
+        </div>
+        <div class="col">
+          <span class="badge bg-success" *ngIf="isOnline">Online</span>
+          <span class="badge bg-danger" *ngIf="!isOnline">Offline</span>
+        </div>
       </div>
     </div>
+    <div class="wrapper">
+      <img src="../assets/images/icons/Logo.png" class="spinner">
+    </div>
   </div>
-  <div class="wrapper">
-    <img src="../assets/icons/Logo.png" class="spinner">
-  </div>
-  <div class="glass-background">
-    <p>Pseudo Serve is a powerful tool designed to streamline front-end development by allowing the creation of mock
-      backend APIs with dynamic responses. It provides an efficient way to simulate backend functionality for testing
-      and
-      development purposes, thus accelerating workflow and improving productivity.</p>
+  <div class="main-content">
+    <div class="main-content-sub">
+      <div class="main-content-sub-image">
+        <img class="main-content-sub-image" src="../../assets/images/content/Image1.png" />
+      </div>
+      <div class="main-content-sub-text">
+        <div class="glass-background">
+          <p class="glass-background-text">Pseudo Serve is a powerful tool designed to streamline front-end
+            development
+            by
+            allowing the creation of mock
+            backend APIs with dynamic responses. It provides an efficient way to simulate backend functionality for
+            testing
+            and
+            development purposes, thus accelerating workflow and improving productivity.</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="main-content-sub">
+      <div class="main-content-sub-text">
+        <div class="glass-background">
+          <p class="glass-background-text">Custom Endpoints
+
+            Users can define temporary API endpoints with specified request and response bodies, enabling testing of
+            various scenarios without needing a live backend.
+
+            Scenario Testing
+
+            It allows for the simulation of different scenarios, providing a robust platform for thorough testing and
+            analysis.
+
+            Development Flexibility
+
+            This feature facilitates agile development by allowing developers to experiment with different API
+            structures.</p>
+        </div>
+      </div>
+      <div class="main-content-sub-image">
+        <img class="main-content-sub-image" src="../../assets/images/content/image2.png" />
+      </div>
+    </div>
+    <div class="main-content-sub">
+      <div class="main-content-sub-image">
+        <img class="main-content-sub-image" src="../../assets/images/content/Image3.png" />
+      </div>
+      <div class="main-content-sub-text">
+        <div class="glass-background">
+          <p class="glass-background-text"> Seamless Import
+
+            Quick setup of multiple API mocks by importing a Postman collection, streamlining the process of creating a
+            mock server based on the API definitions.
+
+            API Design Alignment
+
+            Enables alignment with API documentation and design, ensuring that the mock server closely represents the
+            planned APIs.
+
+            Team Collaboration
+
+            Supports teams that design their APIs in Postman, enhancing collaboration and reducing manual setup efforts.
+          </p>
+        </div>
+      </div>
+
+    </div>
   </div>
   <div class="w-100 position-absolute top-0" *ngIf="modalVersion">
     <div class="alert alert-secondary m-2">

@@ -1,1 +1,39 @@
-<p>header works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Header</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="hamburger" (click)="toggleMenu()">&#9776;</div>
+        <div *ngIf="isMenuVisible" class="nav nav-mob">
+            <a href="#" class="nav-link">What are we?</a>
+            <a href="#" class="nav-link">Why us?</a>
+            <a href="#" class="nav-link">Documentation</a>
+            <a href="#" class="nav-link">Example Code</a>
+        </div>
+        <div class="nav-content" *ngIf="!isMenuVisible">
+            <div class="header-first">
+                <img class="logo" src="../../../assets/images/icons/Logo.png" />
+                <p class="header-text"> PseudoServe</p>
+            </div>
+            <nav class="nav">
+                <a href="#" class="nav-link">What are we?</a>
+                <a href="#" class="nav-link">Why us?</a>
+                <a href="#" class="nav-link">Documentation</a>
+                <a href="#" class="nav-link">Example Code</a>
+            </nav>
+            <div class="user-profile">
+                <button class="up">Login</button>
+                <button class="down">Signup</button>
+            </div>
+        </div>
+    </header>
+
+</body>
+
+</html>
