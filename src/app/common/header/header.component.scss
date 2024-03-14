@@ -132,6 +132,10 @@ button {
         display: none;
         /* Optional: Hide text and profile on small screens for more space */
     }
+
+    .nav-content {
+        display: none !important;
+    }
 }
 
 .nav-content {

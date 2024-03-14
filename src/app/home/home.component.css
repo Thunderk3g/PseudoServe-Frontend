@@ -86,3 +86,17 @@ body {
 .status {
     color: white;
 }
+
+@media screen and (max-width: 768px) {
+    .parent-container {
+        padding: 0px;
+    }
+
+    .main-content-sub {
+        flex-direction: column;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+}
